@@ -16,7 +16,7 @@
     border-left: 3px solid black;
 }
 
-
-.fijo{
-    
+.cambioColor:hover{
+    color: red;
+    transform: scale(1.2);
 }
