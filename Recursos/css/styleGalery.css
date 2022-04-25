@@ -1,4 +1,29 @@
+*, body, .fij{
+    background: #f7f8fa;
+}
+i{
+    background: none !important;
+}
+
+
 .mgn{
     margin-top: 4%;
     margin-bottom: 4%;
 }
+
+.fijo{
+    position: fixed;
+    display: inline-block;
+    bottom: 0px;
+    margin-bottom: 2%;
+    background: white;
+    width: 100%;
+}
+.card{
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 0 !important;
+}
+.modal{
+    background: #80808000;}
+
