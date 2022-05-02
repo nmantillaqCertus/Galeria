@@ -1,7 +1,7 @@
 
 function fnEnviar(){
     /*Derando variables */
-    var vNombre = vApellido = vCorreo = vInstitucion = "";
+    var vNombre = vApellido = vCorreo = vInstitucion = "";    
 
     /*Asignando variables */
     //vNombre = document.getElementById("idNombre").value;
