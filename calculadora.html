@@ -42,11 +42,60 @@
 
 
     <!--Contenido-->
-      <div class="" style=" border: 2px solid skyblue;">
-            <h1>Hola</h1>
+      <div class="container mb-5">
+        
+        <div class="row">
+          <div class="col">
+            <div class="card SinBorde">
+              <form>
+                 <div class="mb-3">
+                  <label for="NroUno" class="form-label">Número Uno</label>
+                  <input id="NroUno" class="form-control" type="number">
+                  <small id="ErrorUno" style="display: none; color: red;">Completar!!!</small>
+                 </div>
+                 <div class="mb-3">
+                  <label for="NroDos" class="form-label">Número Dos</label>
+                  <input id="NroDos" class="form-control" type="number">
+                  <small id="ErrorDos" style="display: none; color: red;">Completar!!!</small>
+                 </div>
+              </form>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card SinBorde">
+
+              <div class="form-check">
+                <label class="form-check-label" for="idRadioSumar">Sumar</label>
+                <input class="form-check-input" name="radiosCalculadora" id="idRadioSumar" type="radio">                
+              </div>
+              
+              <div class="form-check">
+                <label class="form-check-label" for="idRadioRestar">Restar</label>
+                <input class="form-check-input" name="radiosCalculadora" id="idRadioRestar" type="radio">
+              </div>
+
+              <div class="form-check">
+                <label class="form-check-label" for="idRadioMultiplicar">Multiplicar</label>
+                <input  class="form-check-input" name="radiosCalculadora" id="idRadioMultiplicar" type="radio">
+              </div>
+
+              <div class="form-check">
+                <label class="form-check-label" for="idRadioDividir">Dividir</label>
+                <input class="form-check-input" name="radiosCalculadora"  id="idRadioDividir" type="radio">
+              </div>
+
+              <hr>
+              <button class="btn btn-sm btn-success" onclick="fnCalcular()" >Calcular</button>
+            
+            </div>
+          </div>          
+        </div>
+
+        <div class="row text-center">
+          <span id="idResultado">0</span>
+        </div>           
+
       </div>
-
-
     <!--Fin Contenido-->
 
     <!--Footer-->   

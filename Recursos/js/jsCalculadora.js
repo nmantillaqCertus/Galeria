@@ -1,25 +1,81 @@
 
 
 function fnCalcular(){
+    if(valida()){
+        //Inicio proceso de Calcular
+        var NroUno = parseFloat($("#NroUno").val());
+        var NroDos = parseFloat($("#NroDos").val());
 
-    var NroUno = "10";
+        debugger
 
-    var AuxNro = parseFloat(NroUno)
-    var NroDos = 20;
+        var radio = $("input[name=radiosCalculadora]:checked");
+        switch(radio){
+            case radio.attr("id"):
+                if(radio.attr("id") = "idRadioSumar" && radio.length > 0){
+                    $("#idResultado").text( NroUno + NroDos );
+                }
+            break;
+            case radio.attr("id"):
+                if(radio.attr("id") = "idRadioRestar" && radio.length > 0){
+                    $("#idResultado").text( NroUno - NroDos );
+                }                
+            break;
+            case radio.attr("id"):
+                if(radio.attr("id") = "idRadioMultiplicar" && radio.length > 0){
+                    $("#idResultado").text( NroUno * NroDos );
+                }                
+            break;
+            case radio.attr("id"):
+                if(radio.attr("id") = "idRadioDividir" && radio.length > 0){
+                    if(NroDos>0){
+                    $("#idResultado").text( NroUno / NroDos );
+                }else{
+                    alert("La división entre 0, no esta definida !");
+                }
+                }
+                
+            break;
 
+            default:
+                alert("Estimado usuario, seleccione una operación a realizar")
+        }
 
-    return AuxNro + NroDos;
+    }
+}
 
+function valida(){
+    var token =  true;
+
+    if( $("#NroUno").val().length > 0){
+        $("#ErrorUno").hide();
+        //document.getElementById("NroUno").style.display = "none";
+
+    }else{
+        token =  false; 
+        $("#ErrorUno").show();
+        //document.getElementById("NroUno").style.display = "block";
+        $("#NroUno").focus();
+    }
+
+    if( $("#NroDos").val().length > 0){
+        $("#ErrorDos").hide();
+    }else{
+        token =  false; 
+        $("#ErrorDos").show();
+        $("#NroDos").focus();
+    }
+    return token;
 }
 
 
 
 //Funciones
-function fnCalcular(){}
-function fnCalcular(){
+//document.querySelector('input[name="genderS"]:checked').value;
+function fnCalcular2(){}
+function fnCalcular3(){
     return ""
 }
-function fnCalcular(val){
+function fnCalcular4(val){
     return ""
 }
 
@@ -42,6 +98,11 @@ var AlumnoDemo = {
     Edad: 20,
     Direccion: ""
 }
+
+var  funcionAnonima = function (){
+    //Escribes codigo
+}
+
 
 var Alumno = [{
                     nombre : "Cesar",
