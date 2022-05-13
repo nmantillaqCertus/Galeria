@@ -6,36 +6,25 @@ function fnCalcular(){
         var NroUno = parseFloat($("#NroUno").val());
         var NroDos = parseFloat($("#NroDos").val());
 
-        debugger
-
         var radio = $("input[name=radiosCalculadora]:checked");
-        switch(radio){
-            case radio.attr("id"):
-                if(radio.attr("id") = "idRadioSumar" && radio.length > 0){
-                    $("#idResultado").text( NroUno + NroDos );
-                }
+        //var objetoDiasSemana = ["Lunes", "Martes", "Miercoles"]
+        switch(true){
+            case radio.attr("id") == "idRadioSumar" && radio.length > 0:
+                $("#idResultado").text( NroUno + NroDos );
             break;
-            case radio.attr("id"):
-                if(radio.attr("id") = "idRadioRestar" && radio.length > 0){
-                    $("#idResultado").text( NroUno - NroDos );
-                }                
+            case radio.attr("id") == "idRadioRestar" && radio.length > 0:
+                $("#idResultado").text( NroUno - NroDos );                
             break;
-            case radio.attr("id"):
-                if(radio.attr("id") = "idRadioMultiplicar" && radio.length > 0){
-                    $("#idResultado").text( NroUno * NroDos );
-                }                
+            case radio.attr("id") == "idRadioMultiplicar" && radio.length > 0:
+                $("#idResultado").text( NroUno * NroDos );               
             break;
-            case radio.attr("id"):
-                if(radio.attr("id") = "idRadioDividir" && radio.length > 0){
-                    if(NroDos>0){
+            case radio.attr("id") == "idRadioDividir" && radio.length > 0:
+                if(NroDos>0){
                     $("#idResultado").text( NroUno / NroDos );
                 }else{
                     alert("La división entre 0, no esta definida !");
-                }
-                }
-                
+                }                
             break;
-
             default:
                 alert("Estimado usuario, seleccione una operación a realizar")
         }
