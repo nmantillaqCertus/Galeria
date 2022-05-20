@@ -91,15 +91,28 @@ function fnItearar(arr){
 
 function getData(){
     //idItems
+
+    
+    $("#idItems").empty();
+    var objet = [];
     var settings = {
-    "url": "https://api.publicapis.org/entries",
-    "method": "GET",
-    "timeout": 0,
+        "url": "https://api.publicapis.org/entries",
+        "method": "GET",
+        "async": false,
+        "timeout": 0,
     };
     
-    $.ajax(settings).done(function (response) {
-    console.log(response);
+    $.ajax(settings).done(function (data) {
+        console.log(data);
+        objet = data.entries;
     });
+
+    if(objet.length > 0){
+        for(let i = 0; i<10; i++ ){
+            //$("#idItems").append('<li>'+objet[i].API+'</li>');            
+            $("#idItems").append('<li>'+objet[i].API+'</li>');            
+        }
+    }
 }
 
 
